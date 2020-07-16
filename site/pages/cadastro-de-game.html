@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula Games - Sobre nós</title>
+    <link rel="icon" href="img/logo.png">
+    <!-- GOOGLE ICONES -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- GOOGLE FONTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Notable&display=swap" rel="stylesheet">
+    <!-- CDN MATERIALIZE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="navbar-fixed">
+            <nav class="nav-wrapper">
+
+                <a href="../index.html"><img class="brand-logo logo hide-on-med-and-down" src="../img/logo.png" alt="logo"></a>
+
+                <ul class="right light">
+                    <li class="z-depth-1"><a href="../index.html">Início</a></li>
+                    <li class="z-depth-1"><a href="sobre.html">Sobre nós</a></li>
+                    <li class="z-depth-1"><a href="../php/games.php">Games</a></li>
+                    <li class="z-depth-1"><a href="login.html">Fazer Login</a></li>
+                    <li class="z-depth-1"><a href="cadastro-de-usuario.html">Cadastrar-se</a></li>
+                </ul>
+
+            </nav>
+        </div>
+
+    </header>
+
+    <section class="home block">
+
+        <div class="row container banner">
+
+            <div class="col s8 offset-s2 center">
+
+                <div class="card card-login">
+
+                    <div class="card-title strong">Cadastro de game</div>
+
+                    <div card="card-content">
+
+                        <div class="row">
+
+                            <form class="col s12" method="POST" action="../php/cadastrar-game.php"
+                                enctype="multipart/form-data">
+
+                                <div class="row">
+
+                                    <div class="input-field col s10 offset-s1">
+                                        <input id="nome" name="nome" type="text" required autofocus class="validate">
+                                        <label for="nome">Nome do game</label>
+                                    </div>
+
+                                    <div class="input-field col s10 offset-s1">
+                                        <input id="resumo" name="resumo" type="text" required class="validate">
+                                        <label for="resumo">Resumo sobre o game</label>
+                                    </div>
+
+                                    <div class="input-field col s10 offset-s1">
+                                        <input id="detalhes" name="detalhes" type="text" class="validate">
+                                        <label for="detalhes">Informações detalhadas sobre o game (opcional)</label>
+                                    </div>
+
+                                    <div class="input-field col s10 offset-s1">
+                                        <input id="estudio" name="estudio" type="text" class="validate">
+                                        <label for="estudio">Nome do estúdio (opcional)</label>
+                                    </div>
+
+                                    <div class="input-field col s10 offset-s1">
+                                        <input id="titulos" name="titulos" type="text" class="validate">
+                                        <label for="titulos">Outros títulos do estúdio (opcional)</label>
+                                    </div>
+
+                                    <div class="file-field input-field button-image col s12">
+                                        <div class="buttons btn btn-large waves-effect blue darken-1">
+                                            <span>Imagem da capa do game</span>
+                                            <input type="file" id="imagem" name="imagem">
+                                            <label for="imagem">(Opcional)</label>
+                                        </div>
+
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div>
+                                    <button type="submit"
+                                        class="buttons btn btn-large waves-effect indigo darken-1">
+                                        Confirmar <i class="material-icons">add_circle_outline</i>
+                                    </button>
+                                    <button type="reset" class="buttons btn btn-large waves-effect red darken-4">
+                                        Limpar <i class="material-icons">close</i>
+                                    </button>
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    </section>
+
+    <footer class="white-text">Site desenvolvido por Bruno Gattai, 2020.</footer>
+
+    <!-- CDN JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
+    <!-- CDN MATERIALIZE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+        M.AutoInit();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.carousel');
+            var instances = M.Carousel.init(elems, {
+                fullWidth: true,
+                indicators: true,
+                duration: 400
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.parallax');
+                var instances = M.Parallax.init(elems, options);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

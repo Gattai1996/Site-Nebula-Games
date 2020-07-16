@@ -1,0 +1,184 @@
+/* WEBKIT */
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 5px #fff;
+    background: #3949ab;
+    border-radius: 5px;
+}
+
+/* NAVBAR */
+nav {
+    background-color: #3949ab;
+}
+
+
+.logo {
+    width: 40px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+/* RESET */
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* BODY */
+h1, h2, h3, h4, h5 {
+    font-family: 'Notable', sans-serif;
+}
+
+
+html, body {
+    height: 100%;
+    background-color: #212121;
+}
+
+/* HOME PAGE */
+.home {
+    animation: mudarBg 30s infinite;
+    background-image: url('../img/bg1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+/* ANIMAÇÃO DO BANNER NA HOME PAGE */
+@keyframes mudarBg {
+    33% {
+        background-image: url('../img/bg2.jpg');
+    }
+    66% {
+        background-image: url('../img/bg3.jpg');
+    }
+    100% {
+        background-image: url('../img/bg1.jpg');
+    }
+}
+
+.margin-top-small {
+    margin-top: 2rem;
+}
+
+.margin-top {
+    margin-top: 5rem;
+}
+
+.bg {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.block {
+    min-height: 100%;
+}
+
+.banner h2 {
+    animation: colorTitulo 1s infinite;
+    animation: slideUp 1s ease-out;
+    text-decoration: none;
+    color: #1e88e5;
+    font-weight: 900;
+    font-size: 4rem;
+    margin-top: 5rem;
+    position: relative;
+}
+
+/* KEYFRAMES DA ANIMAÇÃO DOS TÍTULOS */
+@keyframes slideUp {
+    from {
+        opacity: 0%;
+        top: 5rem;
+    }
+    to {
+        opacity: 100%;
+        top: 0;
+    }
+}
+
+.banner p {
+    animation: slideUp 1s ease-out;
+    font-size: 2rem;
+    position: relative;
+}
+
+.login {
+    margin-top: 10rem;
+}
+
+.buttons {
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: inset 0 0 5px #fff;
+    border-radius: 5px;
+}
+
+.buttons:hover {
+    box-shadow: inset 0 0 10px #fff;
+}
+
+.btn-floating {
+    box-shadow: inset 0 0 5px #fff;
+}
+
+.btn-floating:hover{
+    box-shadow: inset 0 0 10px #fff;
+}
+
+.material-icons{
+    display: inline-flex;
+    vertical-align: top;
+}
+
+.title {
+    animation: slideUp 1s ease-out;
+    font-size: 3rem;
+    font-weight: 900;
+    position: relative;
+}
+
+.strong {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.small-text {
+    font-size: 0.7rem;
+}
+
+footer {
+    padding: 10px;
+    background-color: #3949ab;
+    text-align: center;
+}
+
+.card-login {
+    padding: 2rem;
+    margin-top: 6rem;
+}
+
+/* CUSTOM MATERIALIZE TAGS */
+/* label focus color */
+.input-field input:focus + label {
+    color: #b71c1c !important;
+}
+/* label underline focus color */
+.row .input-field input:focus {
+    border-bottom: 1px solid #b71c1c !important;
+    box-shadow: 0 1px 0 0 #b71c1c !important;
+}
+
+.input-field .prefix.active {
+    color: #b71c1c !important;
+}
